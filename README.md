@@ -2,8 +2,6 @@
 
 This repository contains solutions to TCS NQT coding practice problems implemented in C++.
 
----
-
 ## Problem 1: Prime Index Sum Calculator
 
 ### Problem Statement
