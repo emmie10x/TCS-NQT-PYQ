@@ -63,3 +63,40 @@ A single integer representing m × m1.
 
 ### Sample Output
 10
+
+---
+
+## Problem 3: Temperature Classification and Average
+
+### Problem Statement
+
+Write a program that takes two temperature values as input and performs the following tasks:
+
+1. Classify each temperature based on the following rules:
+   - If temperature < 10 → print "it's very cool"
+   - If 10 ≤ temperature ≤ 20 → print "it's cold"
+   - If temperature > 20 → print "it's warm"
+
+2. Print the classification for both temperatures (each on a new line).
+
+3. Calculate and print the average of the two temperatures.
+
+4. Print the two temperatures in reverse order.
+
+### Input Format
+Two space-separated integers representing temperature values.
+
+### Output Format
+Line 1 → Classification of first temperature  
+Line 2 → Classification of second temperature  
+Line 3 → Average  
+Line 4 → Temperatures in reverse order  
+
+### Sample Input
+5 25
+
+### Sample Output
+it's very cool  
+it's warm  
+15.0  
+25 5
