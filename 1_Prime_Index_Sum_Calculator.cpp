@@ -38,3 +38,13 @@ int main(){
 
     return 0;
 }
+
+/*
+• Use sieve for prime generation
+• Limit >= 10000th prime (~104729)
+• Use limit = 110000
+• Mark multiples using j += i
+• Access Xth prime using primes[X-1]
+• Use long long for safety
+• Check edge case X=1
+*/
