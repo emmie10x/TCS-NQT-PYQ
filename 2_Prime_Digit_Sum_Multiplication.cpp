@@ -49,3 +49,13 @@ int main(){
 
     return 0;
 }
+
+/*
+• Use sieve to generate primes
+• N must be >= m-th prime
+• Use i*i in outer loop
+• Use j += i in inner loop
+• Access m-th prime using ans[m-1]
+• Apply repeated digit sum (digital root)
+• Check edge case m = 1
+*/
