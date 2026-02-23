@@ -103,42 +103,40 @@ it's warm
 
 ---
 
-Problem 4: Tower of Hanoi – Number of Moves
-Problem Statement
+## Problem 4: Tower of Hanoi – Number of Moves
 
-Write a program that determines the minimum number of moves required to solve the Tower of Hanoi problem for a given number of disks.
+### Problem Statement
 
-Take an integer n as input representing the number of disks.
+Write a program that determines the minimum number of moves required to solve the Tower of Hanoi problem.
 
-Calculate the minimum number of moves required to transfer all disks from the source rod to the destination rod.
+1. Take an integer **n** as input representing the number of disks.
+2. Calculate the minimum number of moves required to transfer all disks from the source rod to the destination rod.
+3. Do not print the actual sequence of moves.
+4. Print only the total number of moves.
 
-Do not print the actual sequence of moves.
+### Input Format
 
-Print only the total number of moves.
+A single integer **n** representing the number of disks.
 
-Input Format
-
-A single integer n representing the number of disks.
-
-Output Format
+### Output Format
 
 A single integer representing the minimum number of moves required.
 
-Constraints
+### Constraints
 
 1 ≤ n ≤ 30
 
-Sample Input
+### Sample Input
 
 3
 
-Sample Output
+### Sample Output
 
 7
 
-Explanation
+### Explanation
 
-The minimum number of moves required to solve the Tower of Hanoi problem is given by the formula:
+The minimum number of moves required is:
 
 2ⁿ − 1
 
