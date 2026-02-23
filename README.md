@@ -143,3 +143,54 @@ The minimum number of moves required is:
 For n = 3:
 
 2³ − 1 = 7
+
+---
+
+## Problem 5: Most Frequent Height Difference
+
+### Problem Statement
+
+Write a program that determines the most frequent absolute difference between adjacent tree heights.
+
+1. Take an integer **n** as input representing the number of trees.
+2. Take **n** space-separated integers representing the heights of the trees.
+3. Calculate the absolute difference between every pair of adjacent trees.
+4. Print the difference that occurs the maximum number of times.
+5. If any height is negative, print **invalid**.
+6. If all differences occur only once, print **non**.
+
+### Input Format
+
+First line contains a single integer **n**.  
+Second line contains **n** space-separated integers representing tree heights.
+
+### Output Format
+
+Print the most frequent absolute difference.  
+Print **invalid** if any height is negative.  
+Print **non** if all differences occur only once.
+
+### Constraints
+
+2 ≤ n ≤ 10^5  
+−10^9 ≤ height ≤ 10^9
+
+### Sample Input
+
+5  
+2 4 6 8 10
+
+### Sample Output
+
+2
+
+### Explanation
+
+The absolute differences between adjacent trees are:
+
+|4 − 2| = 2  
+|6 − 4| = 2  
+|8 − 6| = 2  
+|10 − 8| = 2  
+
+The difference **2** occurs 4 times, which is the maximum frequency.
