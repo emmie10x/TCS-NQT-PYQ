@@ -194,3 +194,59 @@ The absolute differences between adjacent trees are:
 |10 − 8| = 2  
 
 The difference **2** occurs 4 times, which is the maximum frequency.
+
+---
+
+## Problem 6: Minimum Value in Matrix with Validation
+
+### Problem Statement
+
+Write a program to find the minimum value in a given matrix.
+
+1. Take two integers **m** and **n** as input representing the number of rows and columns.
+2. If **m <= 0** or **n <= 0**, print **invalid input**.
+3. Otherwise, read the matrix elements.
+4. Print the minimum value present in the matrix.
+
+### Input Format
+
+First line contains two integers **m** and **n**.  
+Next **m** lines contain **n** space-separated integers representing the matrix.
+
+### Output Format
+
+Print **invalid input** if matrix size is invalid.  
+Otherwise, print the minimum value in the matrix.
+
+### Constraints
+
+-10^6 ≤ matrix element ≤ 10^6  
+-10^3 ≤ m, n ≤ 10^3  
+
+### Sample Input
+
+3 3  
+1 2 3  
+3 -3 4  
+-1 2 3  
+
+### Sample Output
+
+-3  
+
+### Explanation
+
+The matrix elements are checked one by one.  
+The smallest value in the matrix is **-3**.
+
+### Sample Input
+
+0 3  
+
+### Sample Output
+
+invalid input  
+
+### Explanation
+
+Since **m = 0**, the matrix size is invalid.
