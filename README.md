@@ -730,7 +730,7 @@ int main() {
 
 ---
 
-## Problem 10: Game of Rows – Winning Strategy
+## Problem 11: Game of Rows – Winning Strategy
 
 ### Problem Statement
 
