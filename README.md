@@ -591,3 +591,137 @@ Space Complexity: O(1)
 
 For lowercase alphabets → Use Frequency Array (Best Solution)  
 For mixed characters → Use unordered_map
+
+---
+
+---
+
+## Problem 10: Standard Deviation of an Array
+
+### Problem Statement
+
+Write a program to calculate the standard deviation of a given array of integers.
+
+The standard deviation is calculated using the formula:
+
+σ = √( Σ (xi − mean)² / n )
+
+Where:
+- xi is each element of the array  
+- mean is the average of all elements  
+- n is the number of elements  
+
+Print the standard deviation rounded to two decimal places.
+
+---
+
+### Input Format
+
+First line contains an integer **n** — the number of elements.  
+Second line contains **n** space-separated integers.
+
+---
+
+### Output Format
+
+Print the standard deviation rounded to two decimal places.
+
+---
+
+### Constraints
+
+1 ≤ n ≤ 10^5  
+-10^5 ≤ array[i] ≤ 10^5  
+
+---
+
+### Sample Input
+
+5  
+2 4 4 4 5  
+
+### Sample Output
+
+0.98  
+
+---
+
+### Explanation
+
+Mean = (2 + 4 + 4 + 4 + 5) / 5 = 3.8  
+
+Squared differences:
+
+(2 − 3.8)² = 3.24  
+(4 − 3.8)² = 0.04  
+(4 − 3.8)² = 0.04  
+(4 − 3.8)² = 0.04  
+(5 − 3.8)² = 1.44  
+
+Sum of squared differences = 4.8  
+
+Variance = 4.8 / 5 = 0.96  
+
+Standard deviation = √0.96 = 0.98  
+
+---
+
+### Sample Input
+
+5  
+1 1 1 1 1  
+
+### Sample Output
+
+0.00  
+
+---
+
+### Approach
+
+1. Calculate the sum of all elements.
+2. Compute the mean = sum / n.
+3. For each element, calculate (xi − mean)² and add them.
+4. Divide the total by n to get variance.
+5. Take square root of variance to get standard deviation.
+6. Print result with two decimal precision.
+
+---
+
+### C++ Implementation
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+
+    vector<int> arr(n);
+    double sum = 0;
+
+    // Input and sum calculation
+    for(int i = 0; i < n; i++) {
+        cin >> arr[i];
+        sum += arr[i];
+    }
+
+    // Mean
+    double mean = sum / (double)n;
+
+    // Calculate squared differences
+    double sd = 0;
+    for(auto i : arr) {
+        double temp = (double)i - mean;
+        sd += temp * temp;
+    }
+
+    // Variance
+    sd = sd / (double)n;
+
+    // Standard deviation
+    cout << fixed << setprecision(2) << sqrt(sd);
+
+    return 0;
+}
