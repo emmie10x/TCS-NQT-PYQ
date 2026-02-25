@@ -413,3 +413,181 @@ Where:
 - f₁, f₂, ... are frequencies of repeating characters  
 
 ---
+
+# Problem 9: Anagram Checker
+
+## Problem Statement
+
+You are given two strings **str1** and **str2**.  
+Your task is to determine whether the given strings are anagrams of each other or not.
+
+Two strings are considered **anagrams** if they contain the same characters with the same frequencies, possibly in a different order.
+
+---
+
+## Input Format
+
+- The first line contains string `str1`
+- The second line contains string `str2`
+
+---
+
+## Output Format
+
+- Print `"Anagrams"` if both strings are anagrams.
+- Print `"Not Anagrams"` otherwise.
+
+---
+
+## Constraints
+
+- 1 ≤ length of str1, str2 ≤ 10^5  
+- All characters are lowercase English alphabets.
+
+---
+
+## Sample Input 1
+
+```
+listen
+silent
+```
+
+## Sample Output 1
+
+```
+Anagrams
+```
+
+---
+
+## Sample Input 2
+
+```
+hello
+world
+```
+
+## Sample Output 2
+
+```
+Not Anagrams
+```
+
+---
+
+# Approach 1: Sorting Method
+
+## Explanation
+
+1. If lengths of both strings are different → return `Not Anagrams`
+2. Sort both strings
+3. Compare sorted strings
+4. If equal → `Anagrams`, else → `Not Anagrams`
+
+### Time Complexity
+O(n log n)
+
+### Space Complexity
+O(1)
+
+## C++ Code (Sorting Method)
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    string s1, s2;
+    cin >> s1 >> s2;
+
+    if (s1.length() != s2.length()) {
+        cout << "Not Anagrams" << endl;
+        return 0;
+    }
+
+    sort(s1.begin(), s1.end());
+    sort(s2.begin(), s2.end());
+
+    if (s1 == s2)
+        cout << "Anagrams" << endl;
+    else
+        cout << "Not Anagrams" << endl;
+
+    return 0;
+}
+```
+
+---
+
+# Approach 2: Frequency Array (Optimized Approach)
+
+## Explanation
+
+Since the strings contain only lowercase letters:
+
+1. Create an integer array of size 26 (for letters a–z)
+2. Increase count for characters in first string
+3. Decrease count for characters in second string
+4. If all values in array become 0 → strings are anagrams
+
+### Time Complexity
+O(n)
+
+### Space Complexity
+O(1)
+
+## C++ Code (Optimized Method)
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    string s1, s2;
+    cin >> s1 >> s2;
+
+    if (s1.length() != s2.length()) {
+        cout << "Not Anagrams" << endl;
+        return 0;
+    }
+
+    int freq[26] = {0};
+
+    for (int i = 0; i < s1.length(); i++) {
+        freq[s1[i] - 'a']++;
+        freq[s2[i] - 'a']--;
+    }
+
+    for (int i = 0; i < 26; i++) {
+        if (freq[i] != 0) {
+            cout << "Not Anagrams" << endl;
+            return 0;
+        }
+    }
+
+    cout << "Anagrams" << endl;
+    return 0;
+}
+```
+
+---
+
+# Interview Explanation (Short Version)
+
+Since the strings contain only lowercase characters,  
+I used a frequency array of size 26.
+
+I incremented the count for characters of the first string and decremented for the second string.  
+
+If all values in the array are zero at the end, it means both strings have identical character frequencies, hence they are anagrams.
+
+Time Complexity: O(n)  
+Space Complexity: O(1)
+
+---
+
+# Final Recommendation
+
+For lowercase alphabets → Use Frequency Array (Best Solution)  
+For mixed characters → Use unordered_map
