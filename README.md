@@ -725,3 +725,103 @@ int main() {
 
     return 0;
 }
+
+---
+
+---
+
+## Problem 10: Game of Rows – Winning Strategy
+
+### Problem Statement
+
+Two players play a game using a matrix of size N × 3.  
+Each row represents a unique move.  
+
+Players alternate turns and pick any available row.  
+Once a row is picked, it is removed permanently.  
+
+The player who picks the last available row wins.
+
+Player 1 always starts first.
+
+Determine if Player 1 has a guaranteed winning move.
+
+---
+
+### Input Format
+
+First line contains integer T — number of test cases.
+
+For each test case:
+- First line contains integer N.
+- Next N lines contain 3 integers each.
+
+---
+
+### Output Format
+
+If a winning move exists for Player 1, print:
+
+First Player  
+row number  
+
+Otherwise print:
+
+No winning move  
+Second Player  
+
+---
+
+### Constraints
+
+1 ≤ T ≤ 10  
+1 ≤ N ≤ 1000  
+Each row contains exactly 3 integers  
+
+---
+
+### Explanation
+
+The game depends only on the number of rows (N).
+
+If N is odd:
+- Player 1 makes the last move → wins.
+
+If N is even:
+- Player 2 makes the last move → wins.
+
+---
+
+### C++ Implementation
+
+```cpp
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+
+    int T;
+    cin >> T;
+
+    while(T--) {
+
+        int N;
+        cin >> N;
+
+        for(int i = 0; i < N; i++) {
+            int x, y, z;
+            cin >> x >> y >> z;
+        }
+
+        if(N % 2 == 1) {
+            cout << "First Player" << endl;
+            cout << 1 << endl;
+        }
+        else {
+            cout << "No winning move" << endl;
+            cout << "Second Player" << endl;
+        }
+    }
+
+    return 0;
+}
