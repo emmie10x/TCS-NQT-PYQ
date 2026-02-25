@@ -315,3 +315,101 @@ All elements are printed in a single line following the given pattern.
 
 ---
 
+---
+
+## Problem 8: Permutations of a String
+
+### Problem Statement
+
+Write a program to find the total number of distinct permutations of a given string.
+
+1. Take a string **S** as input.
+2. If the string contains duplicate characters, count only distinct permutations.
+3. Print the total number of distinct permutations.
+
+---
+
+### Input Format
+
+A single line containing a string **S** of length **n**.
+
+---
+
+### Output Format
+
+Print an integer representing the total number of distinct permutations.
+
+---
+
+### Constraints
+
+1 ≤ length of S ≤ 10  
+S contains only uppercase English letters (A–Z)  
+
+---
+
+### Sample Input
+
+ABC
+
+### Sample Output
+
+6
+
+---
+
+### Explanation
+
+All permutations of ABC are:
+
+ABC  
+ACB  
+BAC  
+BCA  
+CAB  
+CBA  
+
+Total distinct permutations = 6  
+
+---
+
+### Sample Input
+
+AAB
+
+### Sample Output
+
+3
+
+---
+
+### Explanation
+
+Permutations of AAB are:
+
+AAB  
+ABA  
+BAA  
+
+Although total permutations considering positions are 6 (3!),  
+since two characters are identical, only 3 permutations are distinct.
+
+---
+
+### Approach
+
+If all characters are unique:
+
+Total permutations = n!
+
+If duplicates exist:
+
+Total distinct permutations =  
+
+n! / (f₁! × f₂! × f₃! × ...)
+
+Where:
+- n = length of string  
+- f₁, f₂, ... are frequencies of repeating characters  
+
+---
