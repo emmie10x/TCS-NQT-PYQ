@@ -250,3 +250,68 @@ invalid input
 ### Explanation
 
 Since **m = 0**, the matrix size is invalid.
+
+---
+---
+
+## Problem 7: 2D Array Row Order Based on Even/Odd Row Index
+
+### Problem Statement
+
+Write a program to print the elements of a 2D array based on row index rules.
+
+1. Take two integers **m** and **n** as input representing the number of rows and columns.
+2. Read the matrix elements.
+3. If a row index is **even (0, 2, 4, ...)**, print elements from **left to right**.
+4. If a row index is **odd (1, 3, 5, ...)**, print elements from **right to left**.
+5. Print all elements in a single line separated by spaces.
+
+---
+
+### Input Format
+
+First line contains two integers **m** and **n**.  
+Next **m** lines contain **n** space-separated integers representing the matrix.
+
+---
+
+### Output Format
+
+Print the elements in a single line separated by spaces following the row-order rule.
+
+---
+
+### Constraints
+
+-10^4 ≤ matrix element ≤ 10^4  
+1 ≤ m, n ≤ 100  
+
+---
+
+### Sample Input
+
+4 4  
+1 2 3 4  
+5 6 7 8  
+9 10 11 12  
+13 14 15 16  
+
+---
+
+### Sample Output
+
+1 2 3 4 8 7 6 5 9 10 11 12 16 15 14 13  
+
+---
+
+### Explanation
+
+Row 0 → Even index → Printed left to right → 1 2 3 4  
+Row 1 → Odd index → Printed right to left → 8 7 6 5  
+Row 2 → Even index → Printed left to right → 9 10 11 12  
+Row 3 → Odd index → Printed right to left → 16 15 14 13  
+
+All elements are printed in a single line following the given pattern.
+
+---
+
